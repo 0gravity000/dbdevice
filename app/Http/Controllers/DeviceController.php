@@ -32,6 +32,7 @@ class DeviceController extends Controller
             \SplFileObject::DROP_NEW_LINE    // 行末の改行を読み飛ばす
         );
         */
+        //ToDo:サーバーで実行するとエラーになる。要修正
         $lines = file(storage_path('app\public\sentei_20201225.csv'));
 
         // CSVファイルをループ
