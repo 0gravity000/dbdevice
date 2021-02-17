@@ -110,7 +110,7 @@ DB DeviceのTopページ<br>
         <td>{{ $device->multimedia_broadcast }}</td>
         <td>{{ $device->four_dim }}</td>
         <td>{{ $device->waterproof }}</td>
-        <td>{{ $device->data_update_date }}</td>
+        <td>{{ $device->koushin_date }}</td>
         <td>{{ $device->remarks }}</td>
         <td>{{ $device->browser_info_android_standard }}</td>
         <td>{{ $device->browser_info_chrome }}</td>

@@ -18,3 +18,5 @@ Route::get('/', function () {
 });
 
 Route::get('/top', 'DeviceController@index');
+Route::get('/reload', 'DeviceController@reload');
+
