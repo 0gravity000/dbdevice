@@ -20,6 +20,25 @@ DB DeviceのTopページ<br>
     <tr>
         <th>id</th>
         <th>機種名</th>
+        <th>ニックネーム</th>
+        <th>メーカー（ロゴ）</th>
+        <th>メーカー（社名）</th>
+        <th>発売日</th>
+        <th>OSバージョン(発売時点）</th>
+        <th>プロセッサ</th>
+        <th>RAM</th>
+        <th>ROM</th>
+        <th>質量[g]</th>
+        <th>画面サイズ（インチ）</th>
+        <th>ディスプレイ種別</th>
+        <th>画面解像度（縦×横）</th>
+        <th>メインカメラ</th>
+        <th>サブカメラ</th>
+        <th>Wi-Fi規格</th>
+
+        <!--
+        <th>id</th>
+        <th>機種名</th>
         <th>share</th>
         <th>キャリア</th>
         <th>ニックネーム</th>
@@ -64,11 +83,31 @@ DB DeviceのTopページ<br>
         <th>搭載ブラウザ情報 Android標準</th>
         <th>搭載ブラウザ情報 Chrome</th>
         <th>搭載ブラウザ情報 その他ブラウザ</th>
+         -->
     </tr>
     <tr>
     <tbody>
         @foreach($devices as $device)
+        <td><a href="/top/{{ $device->id }}">{{ $device->id }}</a></td>
+        <td>{{ $device->model_name }}</td>
+        <td>{{ $device->nickname }}</td>
+        <td>{{ $device->maker_logo }}</td>
+        <td>{{ $device->maker_name }}</td>
+        <td>{{ $device->release_date }}</td>
+        <td>{{ $device->os_ver }}</td>
+        <td>{{ $device->processor }}</td>
+        <td>{{ $device->ram }}</td>
+        <td>{{ $device->rom }}</td>
+        <td>{{ $device->mass }}</td>
+        <td>{{ $device->screen_size_inch }}</td>
+        <td>{{ $device->display_type }}</td>
+        <td>{{ $device->screen_resolution }}</td>
+        <td>{{ $device->main_camera }}</td>
+        <td>{{ $device->sub_camera }}</td>
+        <td>{{ $device->wifi_standard }}</td>
+
         <tr>
+        <!--
         <td>{{ $device->id }}</td>
         <td>{{ $device->model_name }}</td>
         <td>{{ $device->share }}</td>
@@ -115,6 +154,7 @@ DB DeviceのTopページ<br>
         <td>{{ $device->browser_info_android_standard }}</td>
         <td>{{ $device->browser_info_chrome }}</td>
         <td>{{ $device->browser_info_other_browsers }}</td>
+         -->
         </tr>
         @endforeach
     </tbody>

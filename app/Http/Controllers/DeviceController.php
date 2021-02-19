@@ -111,4 +111,11 @@ class DeviceController extends Controller
         return redirect('/top');
     }
 
+    //
+    public function show($id)
+    {
+        $device = Device::where('id', $id)->first();
+        return view('detail', compact('device'));
+    }
+
 }
