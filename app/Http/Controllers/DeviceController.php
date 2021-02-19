@@ -55,7 +55,10 @@ class DeviceController extends Controller
                 $device->nickname = $column[4];
                 $device->maker_logo = $column[5];
                 $device->maker_name = $column[6];
-                $device->release_date = $column[7];
+                //発売日 空白チェック
+                if ($column[41] != "") {
+                    $device->release_date = $column[7];
+                }
                 $device->os_ver = $column[8];
                 $device->useragent_at_release = $column[9];
                 $device->useragent_for_model = $column[10];
@@ -89,7 +92,10 @@ class DeviceController extends Controller
                 $device->multimedia_broadcast = $column[38];
                 $device->four_dim = $column[39];
                 $device->waterproof = $column[40];
-                $device->koushin_date = $column[41];
+                //データ更新日 空白チェック
+                if ($column[41] != "") {
+                    $device->koushin_date = $column[41];
+                }
                 $device->remarks = $column[42];
                 $device->browser_info_android_standard = $column[43];
                 $device->browser_info_chrome = $column[44];
@@ -97,7 +103,6 @@ class DeviceController extends Controller
                 
                 //dd($device);
                 $device->save();
-
             }
 
             $i++;

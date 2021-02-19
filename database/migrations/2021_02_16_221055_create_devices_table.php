@@ -16,12 +16,12 @@ class CreateDevicesTable extends Migration
         Schema::create('devices', function (Blueprint $table) {
             $table->id();
             $table->string('model_name');
-            $table->string('share')->nullable();
+            $table->double('share')->nullable();
             $table->string('career')->nullable();
             $table->string('nickname')->nullable();
             $table->string('maker_logo')->nullable();
             $table->string('maker_name')->nullable();
-            $table->string('release_date')->nullable();
+            $table->date('release_date')->nullable()->default(null);
             $table->string('os_ver')->nullable();
             $table->string('useragent_at_release')->nullable();
             $table->string('useragent_for_model')->nullable();
@@ -55,7 +55,7 @@ class CreateDevicesTable extends Migration
             $table->string('multimedia_broadcast')->nullable();
             $table->string('four_dim')->nullable();
             $table->string('waterproof')->nullable();
-            $table->string('koushin_date')->nullable();
+            $table->date('koushin_date')->nullable()->default(null);
             $table->string('remarks')->nullable();
             $table->string('browser_info_android_standard')->nullable();
             $table->string('browser_info_chrome')->nullable();
